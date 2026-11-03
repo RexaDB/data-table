@@ -1,13 +1,13 @@
 /*
- * @rexadb/data-table theme for Tailwind CSS v4 apps.
+ * @rexadbapp/data-table theme for Tailwind CSS v4 apps.
  *
  *   @import "tailwindcss";
- *   @import "@rexadb/data-table/theme.css";
+ *   @import "@rexadbapp/data-table/theme.css";
  *
  * Registers the package's class names with Tailwind (@source) and maps its
  * color tokens. Every token is a plain CSS variable with a zero-specificity
  * default, so any value your app sets on :root or .dark wins.
- * Apps without Tailwind import "@rexadb/data-table/styles.css" instead.
+ * Apps without Tailwind import "@rexadbapp/data-table/styles.css" instead.
  */
 
 @source "./";

@@ -1,16 +1,16 @@
-# @rexadb/data-table
+# @rexadbapp/data-table
 
 React tables for database apps, extracted from [RexaDB](https://github.com/RexaDB/RexaDB).
 
 - **`DataTable`**: a list table with sorting, row selection, column resizing, columns that collapse on narrow screens, client/server/cursor paging, virtualized scrolling, infinite loading, skeletons, row context menus and translatable labels.
-- **`DataGrid`** (`@rexadb/data-table/grid`): a canvas grid for browsing and editing database rows, built on [Glide Data Grid](https://grid.glideapps.com). It has typed cells (JSON, enum, boolean, date) with inline editors, pending-change and pending-delete marks, foreign-key previews, multi-cell selection and copy, header sort and column menus, and paged or infinite footers.
+- **`DataGrid`** (`@rexadbapp/data-table/grid`): a canvas grid for browsing and editing database rows, built on [Glide Data Grid](https://grid.glideapps.com). It has typed cells (JSON, enum, boolean, date) with inline editors, pending-change and pending-delete marks, foreign-key previews, multi-cell selection and copy, header sort and column menus, and paged or infinite footers.
 
 It works with React 18 and 19, renders on the server (Next.js App Router included, every entry is `"use client"`), and ships ESM, CommonJS and TypeScript types.
 
 ## Install
 
 ```sh
-npm install @rexadb/data-table
+npm install @rexadbapp/data-table
 # for DataGrid only:
 npm install @glideapps/glide-data-grid
 ```
@@ -22,17 +22,17 @@ Choose one:
 **Any app.** Import the precompiled stylesheet once:
 
 ```ts
-import "@rexadb/data-table/styles.css";
+import "@rexadbapp/data-table/styles.css";
 ```
 
 **Tailwind CSS v4 apps.** Let Tailwind generate the classes alongside yours:
 
 ```css
 @import "tailwindcss";
-@import "@rexadb/data-table/theme.css";
+@import "@rexadbapp/data-table/theme.css";
 ```
 
-`theme.css` registers the package with Tailwind (`@source`) and maps its color tokens. If your app already defines shadcn-style tokens, you can skip the import and add `@source "../node_modules/@rexadb/data-table/dist";` instead.
+`theme.css` registers the package with Tailwind (`@source`) and maps its color tokens. If your app already defines shadcn-style tokens, you can skip the import and add `@source "../node_modules/@rexadbapp/data-table/dist";` instead.
 
 Dark mode follows a `.dark` class on `<html>`. Colors are CSS variables with zero-specificity defaults, so setting them on `:root` / `.dark` re-themes everything:
 
@@ -45,7 +45,7 @@ Dark mode follows a `.dark` class on `<html>`. Colors are CSS variables with zer
 ## DataTable
 
 ```tsx
-import { DataTable, type TableColumn } from "@rexadb/data-table";
+import { DataTable, type TableColumn } from "@rexadbapp/data-table";
 
 interface User {
   id: string;
@@ -80,7 +80,7 @@ Paging modes: client (default; the table slices `data`), `{ mode: "server", tota
 
 ```tsx
 import "@glideapps/glide-data-grid/dist/index.css"; // once, anywhere in your app
-import { DataGrid } from "@rexadb/data-table/grid";
+import { DataGrid } from "@rexadbapp/data-table/grid";
 
 <DataGrid
   results={{ rows, fields }}            // rows plus [{ name }] in column order
@@ -117,7 +117,7 @@ RexaDB applies a small patch to `@glideapps/glide-data-grid@6.0.4-alpha24`. It s
 The tables render buttons, selects, checkboxes, tooltips, popovers, a calendar, side sheets, a confirm dialog, a code editor and icons. Built-in versions (Radix-based) are included. To use your design system's versions, pass them to `DataTableProvider`. The shapes follow [shadcn/ui](https://ui.shadcn.com), so its components drop in unchanged:
 
 ```tsx
-import { DataTableProvider } from "@rexadb/data-table";
+import { DataTableProvider } from "@rexadbapp/data-table";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import * as Select from "@/components/ui/select";
