@@ -97,5 +97,12 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://github.com/RexaDB/RexaDB"
+  "homepage": "https://github.com/RexaDB/data-table#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RexaDB/data-table.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RexaDB/data-table/issues"
+  }
 }
