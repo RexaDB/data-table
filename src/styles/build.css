@@ -1,0 +1,9 @@
+/* Source for dist/styles.css: every class the package uses, precompiled, with no preflight reset. */
+@layer theme, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "tw-animate-css";
+@import "./theme.css";
+
+@source "../";
+@custom-variant dark (&:is(.dark *));
