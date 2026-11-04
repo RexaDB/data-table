@@ -1,9 +1,9 @@
 {
   "name": "@rexadbapp/data-table",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Database-ready React tables: a sortable, selectable, paged list table and a canvas data grid for editing database rows.",
   "author": "Rexa DB",
-  "license": "GPL-3.0-or-later",
+  "license": "MIT",
   "keywords": [
     "react",
     "table",

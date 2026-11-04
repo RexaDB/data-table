@@ -153,4 +153,4 @@ bun run build       # dist/: ESM, CJS, types, styles.css, theme.css
 
 ## License
 
-GPL-3.0-or-later, same as RexaDB.
+MIT — see [LICENSE](LICENSE).
